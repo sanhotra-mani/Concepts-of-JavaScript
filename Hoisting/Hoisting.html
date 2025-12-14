@@ -1,0 +1,30 @@
+<script>
+(function(){
+
+    console.log(hoisting);      // Output: undefined
+                                // Reason: calling var type variable before initializing.
+
+    var hoisting = 'Demonstrating Hoisting';
+
+    
+    var txt1 = 'First Text';
+    xyz();         //  Output: First Text
+                   //          undefined
+                    // Reason: Function hoisting works fine since it's not a arrow function
+                    //         but variable txt2 gives undefined since function called before initializing of the text2 var type variable.
+    var txt2 = 'Second Text';
+
+    function xyz () {
+        console.log(txt1);
+        console.log(txt2);
+    }
+
+
+    abc();     // Output: Uncaught TypeError: abc is not a function
+               // Reason: It behaves like a variable
+    var abc =  function () {
+        console.log('Hi from local scope');
+    }
+
+})();
+</script>
