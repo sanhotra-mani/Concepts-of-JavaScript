@@ -1,0 +1,44 @@
+<script>
+(function(){
+
+    //  first way
+    function outer(){
+        let outerVariable = 'Hi Mani';
+        function inner(){
+            let innerVariable = 'Hi from local scope';
+            console.log(innerVariable);
+            console.log(outerVariable);
+        }
+        inner();
+    }
+    outer();
+    
+
+    //  second way
+    function outer1(){
+        let outerVariable = 'Hi Mani';
+        function inner1(){
+            let innerVariable = 'Hi from local scope';
+            console.log(innerVariable);
+            console.log(outerVariable);
+        }
+        return inner1;
+    }
+    let callFun = outer1();
+    callFun();
+
+
+    //  third way
+    function outer2(){
+        let outerVariable = 'Hi Mani';
+        function inner2(){
+            let innerVariable = 'Hi from local scope';
+            console.log(innerVariable);
+            console.log(outerVariable);
+        }
+        return inner2;
+    }
+    outer2()();
+
+})();
+</script>
