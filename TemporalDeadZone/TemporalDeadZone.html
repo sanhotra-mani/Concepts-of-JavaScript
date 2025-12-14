@@ -1,0 +1,31 @@
+<script>
+(function(){
+
+    // console.log(tdz);      // Output: Uncaught ReferenceError: Cannot access 'tdz' before initialization
+                           // Reason: calling let type variable before initializing.
+
+    let tdz = 'Demonstrating Temporal Dead Zone';
+
+    console.log(tdz1);      // Output: Uncaught ReferenceError: Cannot access 'tdz1' before initialization
+                           // Reason: calling const type variable before initializing.
+
+    const tdz1 = 'Demonstrating Temporal Dead Zone';
+
+
+    abc();     // Output: Uncaught ReferenceError: Cannot access 'abc' before initialization
+               // Reason: It behaves like a let type variable
+    
+    let abc =  function () {
+        console.log('Hi from local scope');
+    }
+
+
+    xyz();     // Output: Uncaught ReferenceError: Cannot access 'xyz' before initialization
+               // Reason: It behaves like a const type variable
+    
+    const xyz =  function () {
+        console.log('Hi from local scope');
+    }
+    
+})();
+</script>
