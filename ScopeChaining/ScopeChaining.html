@@ -1,0 +1,33 @@
+<script>
+(function(){
+    var txtGlobal = 'Global Scope Variable';
+    function outerMost () {
+        var txtOuterMost = 'txtOuterMost';
+        function outer () {
+            var txtOuter = 'txtOuter';
+            function inner () {
+                var txtInner = 'txtInner';
+                function innerMost () {
+                    var txtInnerMost = 'txtInnerMost';
+                    console.log(txtInnerMost);   // check "txtInnerMost" is available in local scope
+
+                    console.log(txtInner);       // check "txtInner" is available in local scope -> inner func. (parent) scope (closure)
+                    
+                    console.log(txtOuter);       // check "txtOuter" is available in local scope -> inner func. (parent) scope (closure) -> outer func. 
+                                                 // (parent  -> parent) scope (closure)
+                    
+                    console.log(txtOuterMost);   // check "txtOuterMost" is available in local scope -> inner func. (parent) scope (closure) -> outer func. 
+                                                 // (parent -> parent)  scope (closure) -> outerMost func. (parent -> parent -> parent) scope (closure)
+                    
+                    console.log(txtGlobal);      // check "txtGlobal" is available in local scope -> inner func. (parent) scope (closure) -> outer func. 
+                                                 // (parent -> parent) scope (closure) -> outerMost func. (parent -> parent -> parent) scope (closure) -> global scope
+                }
+                innerMost();
+            }
+            inner();
+        }
+        outer();
+    }
+    outerMost();
+})();
+</script>
