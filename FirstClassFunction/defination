@@ -1,0 +1,5 @@
+In JavaScript, functions are "first-class functions" or "first-class citizens". This means:
+    Functions can be assigned to variables.
+    Functions can be passed as arguments to other functions.
+    Functions can be returned from other functions.
+This is a foundation for callbacks, higher-order functions, and functional programming in JS.

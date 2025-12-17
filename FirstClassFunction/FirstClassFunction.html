@@ -1,0 +1,29 @@
+<script>
+(function(){
+
+    // 1. Assigning a function to a variable
+    const greet = function(name) {
+        return "Hello, " + name;        // Output: Hello, Mani Rattan 
+    };
+
+    // 2. Passing a function as an argument
+    function processUserInput(callback) {
+        const name = "Mani Rattan";
+        return callback(name);
+    }
+    console.log(processUserInput(greet));   // Output: Hello, Mani Rattan 
+                                            // (passing greet function as an argument)
+
+
+    // 3. Returning a function from another function
+    function multiplier(factor) {
+        return function(x) {        //  returning function
+            return x * factor;
+        };
+    }
+
+    const double = multiplier(2);
+    console.log(double(5)); // Output: 10
+
+})();
+</script>
