@@ -1,0 +1,59 @@
+<script>
+(function(){
+
+    // 1. Function Declaration (aka Function Statement)
+    function greet() {
+        console.log("Hello");
+    }
+
+    // 2. Function Expression
+    const greet = function() {
+        console.log("Hello");
+    };
+
+    // 3. Anonymous Function (function without a name, often used as a callback)
+    const greet = function() {
+        console.log("Hello");
+    };
+
+    // 4. Arrow Function
+    const greet = () => {
+        console.log("Hello");
+    };
+
+    // 5. Named Function Expression
+    const greet = function sayHello() {
+        console.log("Hello");
+    };
+
+    // 6. Constructor Function (used with new to create objects)
+    function Person(name) {
+        this.name = name;
+    }
+    const p = new Person("Alice");
+
+    // 7. Immediately Invoked Function Expression (IIFE)
+    (function() {
+        console.log("Hello");
+    })();
+
+    // 8. Generator Function
+    function* gen() {
+        yield 1;
+        yield 2;
+    }
+
+    // 9. Callback Function (passed as an argument to another function)
+    [1, 2, 3].forEach(function(item) {
+        console.log(item);
+    });
+
+    // 10. Higher-Order Function (takes or returns another function)
+    function higherOrder(fn) {
+        return function() {
+            fn();
+        };
+    }
+
+})();
+</script>

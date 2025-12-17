@@ -1,0 +1,23 @@
+There are the 10 types of functions in JavaScript:
+
+1. Function Declaration (aka Function Statement)
+
+2. Function Expression
+
+3. Arrow Function
+
+4. Anonymous Function (function without a name, often used as a callback)
+
+5. Named Function Expression
+
+6. Constructor Function (used with new to create objects)
+
+7. Immediately Invoked Function Expression (IIFE)
+
+8. Generator Function
+
+9. Callback Function (passed as an argument to another function)
+
+10. Higher-Order Function (takes or returns another function)
+
+These cover the most common function types and patterns in JavaScript.
