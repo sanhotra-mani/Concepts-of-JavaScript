@@ -1,0 +1,37 @@
+<script>
+(function(){
+
+    var a = 10;
+    {
+        var a = 20;
+        console.log(a);     //  Output: 20
+    }
+    console.log(a);         //  Output: 20
+
+
+    let b = 10;
+    {
+        let b = 20;
+        console.log(b);     //  Output: 20
+    }
+    console.log(b);         //  Output: 10
+
+
+    var c = 10;
+    {
+        let c = 20;
+        console.log(c);    // Output: 20
+    }
+    console.log(c);        // Output: 10
+
+
+    // illegal shadowing
+    let d = 10;
+    {
+        var d = 20;
+        console.log(d);    // Uncaught SyntaxError: 
+    }                      // Identifier 'd' has already been declared
+    console.log(d);
+
+})();
+</script>
