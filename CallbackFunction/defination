@@ -1,0 +1,7 @@
+A callback function in JavaScript is a function that is passed as an argument to another function and is executed after some operation is completed.
+
+Common uses:
+
+    Asynchronous operations (setTimeout, setInterval, AJAX/fetch)
+    Array methods (map, filter, forEach, etc.)
+    Event handling

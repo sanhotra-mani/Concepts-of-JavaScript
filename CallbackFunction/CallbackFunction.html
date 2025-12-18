@@ -1,0 +1,23 @@
+<script>
+(function(){
+
+    setTimeout(function() {
+        console.log("Hello, Mani");
+    }, 2000);                   // Output: Hello, Mani after 2 seconds
+
+
+    let array = [2, 6, 4, 5, 9];
+    
+    let double = array.map(function (num) {
+        return num * 2;
+    });
+    console.log(double);    // Output: [4, 12, 8, 10, 18]
+
+
+    let evenNumbers = array.filter(function (num) {
+        return num % 2 === 0;
+    });
+    console.log(evenNumbers);    // Output: [2, 6, 4]
+
+})();
+</script>
