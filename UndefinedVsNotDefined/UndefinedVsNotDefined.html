@@ -1,0 +1,20 @@
+<script>
+(function(){
+    
+    console.log(abc);      // Output: Uncaught ReferenceError: abc is not defined
+                           // Reason: calling variable which is not declared.
+
+    console.log(xyz);      // Output: undefined
+                           // Reason: calling var type variable before initializing.
+    var xyz = 'Hi from Concepts of JavaScript.';
+    console.log(xyz);      // Output: Hi from Concepts of JavaScript.
+                           // Reason: value has been assigned to variable.
+
+    function add(a, b){     // Here a and b are the parameters in the function definition.
+        return a + b;
+    }
+
+    add(5, 10);          // here 5 and 10 are the arguments passed to the function.
+
+})();
+</script>

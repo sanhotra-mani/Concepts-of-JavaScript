@@ -1,0 +1,20 @@
+A "var" type variable is declared but access it before its value is assigned.
+"not defined" means the variable does not exist in the current scope at all.
+
+Parameters are placeholders in the function definition.
+Arguments are the real values supplied during the function call.
+
+
+
+Java Script Interview Question:
+What is Undefined vs not defined?
+
+A "var" type variable is declared but access it before its value is assigned.
+"not defined" means the variable does not exist in the current scope at all.
+
+Parameters are placeholders in the function definition.
+Arguments are the real values supplied during the function call.
+
+#javascript #notDefined #undefined #parameter #argument #conceptsOfJavaScript #freeLancer #reactJs #frontend #softwareDeveloper #nodeJs #backend #fullStack #interviewQuestion
+
+https://github.com/sanhotra-mani/Concepts-of-JavaScript/blob/main/TemporalDeadZone/TemporalDeadZone.html
