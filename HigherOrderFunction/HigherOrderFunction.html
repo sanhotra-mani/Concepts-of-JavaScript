@@ -1,0 +1,43 @@
+<script>
+(function(){
+
+    // WITHOUT HIGHER ORDER FUNCTION:
+
+    let radius = [5, 7, 4, 8];
+    
+    let calculateArea = function(arr) {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            result.push(Math.PI * arr[i] * arr[i]);
+        }
+        return result;
+    }
+    console.log(calculateArea(radius));
+    // Output: [78.5398163397, 153.93804002589, 50.2654824574, 201.0619298297]
+
+    let calculateCircleCircumference = function(arr) {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            result.push(2 * Math.PI * arr[i]);
+        }
+        return result;
+    }
+    console.log(calculateCircleCircumference(radius));
+    // Output: [31.4159265358, 43.98229715025, 25.1327412287, 50.2654824574]
+
+    let calculateCircleDiameter = function(arr) {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            result.push(2 * arr[i]);
+        }
+        return result;
+    }
+    console.log(calculateCircleDiameter(radius));
+    // Output: [10, 14, 8, 16]
+
+
+
+
+
+})();
+</script>

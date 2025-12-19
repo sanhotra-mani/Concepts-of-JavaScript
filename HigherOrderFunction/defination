@@ -1,0 +1,12 @@
+Higher-order functions (HOFs) in JavaScript are functions that can accept other functions as arguments, return functions, or both.
+
+Benefits of Higher Order Functions:
+
+1. Code Reusability
+2. Modularity
+3. Flexibility
+
+JavaScript provides several built-in HOFs that are commonly used for array manipulation:
+    Array.prototype.map()
+    Array.prototype.filter()
+    Array.prototype.reduce()

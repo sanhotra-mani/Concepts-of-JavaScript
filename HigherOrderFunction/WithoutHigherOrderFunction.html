@@ -1,0 +1,46 @@
+<script>
+(function(){
+
+    // WITH HIGHER ORDER FUNCTION:
+
+    let radius = [5, 7, 4, 8];
+
+    let circleArea = function(r) {
+        return Math.PI * r * r;
+    }
+
+    let circleCircumference = function(r) {
+        return 2 * Math.PI * r;
+    }
+
+    let circleDiameter = function(r) {
+        return 2 * r;
+    }
+
+    let higherOrderFun = function(arr, logic) {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            result.push(logic(arr[i]));
+        }
+        return result;
+    }
+
+    console.log(higherOrderFun(radius, circleArea));
+    // Output: [78.5398163397, 153.93804002589, 50.2654824574, 201.0619298297]
+    
+    console.log(higherOrderFun(radius, circleCircumference));
+    // Output: [31.4159265358, 43.98229715025, 25.1327412287, 50.2654824574]
+    
+    console.log(higherOrderFun(radius, circleDiameter));
+    // Output: [10, 14, 8, 16]
+
+
+
+
+
+
+
+
+
+})();
+</script>
