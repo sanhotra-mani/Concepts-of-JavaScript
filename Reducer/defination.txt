@@ -1,0 +1,8 @@
+The reduce() is an array function that is to execute the reducer function on each element of an array, resulting in a single output value. The result can be a number, string, object, or even an array, effectively "reducing" the entire array into a single, final form.
+
+array.reduce(callbackFn, initialValue);
+ 
+ - callbackFn: A function executed on each element of the array. It takes four arguments:
+    * accumulator: The value returned from the previous iteration, or the initialValue if it's the first iteration.
+    * currentValue: The current element being processed in the array.
+ - initialValue (optional): A starting value for the accumulator. If not provided, the first array element is used as the initial value, and the iteration starts from the second element. It is generally safer to always provide an initialValue. 

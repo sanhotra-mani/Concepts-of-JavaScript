@@ -1,0 +1,41 @@
+<script>
+(function(){
+
+    const numbers = [15.5, 2.3, 1.1, 4.7];
+    function getSum(total, num) {
+        return total + Math.round(num);
+    }
+
+    let results = numbers.reduce(getSum, 0);
+    console.log(results); // Output: 24
+
+    let results2 = numbers.reduce((total, num) => total + Math.round(num), 0);
+    console.log(results2); // Output: 24
+
+    const users = [{ name: 'Alice', age: 25 }, { name: 'Bob', age: 12 },
+        { name: 'David', age: 40 }, { name: 'Kerry', age: 25 }, { name: 'John', age: 40 }];
+
+    function groupedByAge(accumulator, currentValue) {
+        if (!accumulator[currentValue.age]) {
+            accumulator[currentValue.age] = [];
+        }
+        accumulator[currentValue.age].push(currentValue.name);
+        return accumulator;
+    }
+
+    let results3 = users.reduce(groupedByAge, {});
+    console.log(results3); 
+    // Output: {12: ['Bob'], 25: ['Alice', 'Kerry'], 40: ['David', 'John']}
+
+    let results4 = users.reduce((accumulator, currentValue) => {
+        if (!accumulator[currentValue.age]) {
+            accumulator[currentValue.age] = [];
+        }
+        accumulator[currentValue.age].push(currentValue.name);
+        return accumulator;
+    }, {});
+    console.log(results4); 
+    // Output: {12: ['Bob'], 25: ['Alice', 'Kerry'], 40: ['David', 'John']}
+
+})();
+</script>
