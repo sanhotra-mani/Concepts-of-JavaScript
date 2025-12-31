@@ -1,0 +1,10 @@
+JavaScript Interview Question:
+Que: What is FILTER function?
+Ans: The filter() method is an array function that creates a new array containing only the elements that pass a specific condition implemented by a provided function, without modifying the original array. It is non-mutating, meaning it leaves the original array unchanged.
+
+How filter() Works
+    - The filter() method iterates over each element in an array and calls a callback function for each one. The callback function should return a boolean value: 
+        * If true is returned, the element is included in the new filtered array.
+        * If false is returned, the element is excluded from the new filtered array. 
+
+#javascript #hoisting #conceptsOfJavaScript #freeLancer #reactJs #frontend #softwareDeveloper #nodeJs #backend #fullStack #interviewQuestion

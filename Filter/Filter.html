@@ -1,0 +1,37 @@
+<script>
+(function(){
+
+    const ary = [5, 6, 8, 3, 7];
+
+    function isEven(num) {
+        return num % 2 === 0;
+    }
+
+    let results = ary.filter(isEven);
+    console.log(results); // Output: [6, 8]
+
+    let results2 = ary.filter(num => num % 2 === 0  );
+    console.log(results2); // Output: [6, 8]
+
+    const users = [
+        { name: 'Alice', age: 25 },
+        { name: 'Bob', age: 12 },
+        { name: 'Charlie', age: 15 },
+        { name: 'David', age: 40 }
+    ];
+
+    function isAdult(user) {
+        return user.age >= 18;
+    }
+
+    let results3 = users.filter(isAdult);
+    console.log(results3); 
+    // Output: [{ name: 'Alice', age: 25 }, { name: 'David', age: 40 }]
+
+
+    let results4 = users.filter(user => user.age >= 18);
+    console.log(results4); 
+    // Output: [{ name: 'Alice', age: 25 }, { name: 'David', age: 40 }]
+
+})();
+</script>
