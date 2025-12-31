@@ -1,0 +1,5 @@
+The map() method is an array function that creates a new array populated with the results of calling a provided function on every element in the original array. It is non-mutating, meaning it leaves the original array unchanged. 
+
+Key Features
+    Purpose: To transform data in an array into a new format.
+    Return Value: A new array of the exact same length as the original.

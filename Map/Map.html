@@ -1,0 +1,27 @@
+<script>
+(function(){
+
+    const ary = [5, 6, 8, 3, 7];
+
+    function double(num) {
+        return num * 2;
+    }
+
+    let results = ary.map(double);
+    console.log(results); // Output: [10, 12, 16, 6, 14]
+
+    let results2 = ary.map(function (num) {
+        return num * 2;
+    });
+    console.log(results2); // Output: [10, 12, 16, 6, 14]
+
+    let results3 = ary.map((num) => {
+        return num * 2;
+    });
+    console.log(results3); // Output: [10, 12, 16, 6, 14]
+
+    let results4 = ary.map(num => num * 2);
+    console.log(results4); // Output: [10, 12, 16, 6, 14]
+
+})();
+</script>
