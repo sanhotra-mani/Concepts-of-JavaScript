@@ -1,0 +1,29 @@
+<script>
+(function(){
+
+    const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const success = true;
+            if (success) {
+                resolve("Data successfully fetched!");
+            } else {
+                reject(new Error("Failed to fetch data."));
+            }
+        }, 1000);
+    });
+
+    myPromise
+        .then((value) => {
+            console.log(value);
+        })
+        .catch((error) => {
+            console.error(error.message);
+        })
+        .finally(() => {
+            console.log("Operation completed (cleanup done).");
+        });
+
+
+    
+})();
+</script>
