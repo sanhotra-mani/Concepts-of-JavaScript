@@ -1,0 +1,6 @@
+Que: What is Call, Apply and Bind Function?
+Ans: The call() method is a predefined JavaScript method that immediately invokes a function and allows you to manually specify the this value (the context) and pass arguments individually. This is useful for "borrowing" methods between objects or setting a specific context for a utility function. 
+
+apply(): Similar to call(), but takes arguments as a single array instead of individually.
+
+bind(): Returns a new function with the this value permanently bound, which can be executed later. The original function is not invoked immediately.

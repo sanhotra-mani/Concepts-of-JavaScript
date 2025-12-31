@@ -1,0 +1,29 @@
+<script>
+(function(){
+
+    function greeting(greet, punc) {
+        return greet + " " + this.fName + " " + this.lName + punc;
+    }
+
+    // Create a person Object
+    const person = {
+        fName: "John",
+        lName: "Doe"
+    }
+
+    // Using call method with a specified this value and individual arguments
+    let name = greeting.call(person, "Hello", "!!");
+    console.log(name); // Output: Hello John Doe!!
+
+    // Using apply method with a specified this value and arguments as an array
+    let name2 = greeting.apply(person, ["Hello", "!!"]);
+    console.log(name2); // Output: Hello John Doe!!
+
+    // Using bind method with a specified this value and individual arguments
+    // and it returns the function to be called later
+    let name3 = greeting.bind(person, "Hello", "!!");
+    console.log(name3()); // Output: Hello John Doe!!
+
+    
+})();
+</script>
