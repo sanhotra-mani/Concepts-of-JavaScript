@@ -1,0 +1,12 @@
+
+The rest and spread operators share the same three-dot syntax ( ...), but they perform opposite functions depending on where they are used.
+
+Spread:
+   - The pusrpose of spread is to Unpacks/expands elements
+   - It can be used in function calls, array/object literals
+   - It will give list of values
+
+Rest:
+   - The pusrpose of rest is to Packs/collects elements
+   - It can be used in function parameters, destructuring
+   - It will give a single array or object
