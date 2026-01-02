@@ -1,0 +1,23 @@
+<script>
+(function(){
+
+    // async makes the normal function to asynchronous function
+    async function getUserData() {
+        try {
+            // Execution pauses here until fetch completes
+            const response = await fetch('https://api.example.com/user'); 
+            
+            // Execution pauses here until JSON is parsed
+            const data = await response.json(); 
+            
+            console.log(data);
+        } catch (error) {
+            // Standard try/catch is used for error handling
+            console.error("Error fetching data:", error);
+        }
+    }
+
+    getUserData();
+
+})();
+</script>

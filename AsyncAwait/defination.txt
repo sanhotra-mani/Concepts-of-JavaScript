@@ -1,0 +1,16 @@
+
+
+Async Function: The async function allows to make a synchronous function to asynchronous. This ensures that the execution thread is not blocked. 
+   - Preceding a function with async ensures it always returns a Promise.
+   - If the function returns a value that is not a promise, JavaScript automatically wraps it in a resolved promise.
+
+Await Keyword: The await keyword is used to wait for a promise to resolve.
+   - Used only inside async functions or modules, 
+   - await pauses the execution of the function until the promise is settled (either fulfilled or rejected).
+   - While the specific function is paused, the rest of the application remains responsive because the main thread is not blocked. 
+
+
+Why Use Async/Await?
+1. Readability: It allows asynchronous code to look and behave like synchronous code, making it easier to follow than traditional .then() promise chains (often called "callback hell").
+2. Error Handling: You can use standard try...catch blocks to manage errors, just as you would with synchronous code.
+3. Non-Blocking: It prevents the user interface from "freezing" during long-running tasks.
