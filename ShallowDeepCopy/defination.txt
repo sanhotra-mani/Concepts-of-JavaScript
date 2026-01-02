@@ -1,0 +1,15 @@
+
+Shallow copy: A shallow copy occurs when you copy the reference of an object to a new variable. In this process, only the top-level properties are copied, while nested objects or arrays still reference the original memory location. This means that if you change the nested properties in one object, those changes will reflect in the other because they share the same memory reference.
+
+Deep copy: A deep copy, creates a completely independent copy of the object, including all nested objects or arrays. This ensures that changes made to one object do not affect the other. Each object is stored in a separate memory location, making them entirely independent.
+
+   1. JSON.parse(JSON.stringify()):
+      * Works for plain JSON-compatible data.
+      * Limitation: Loses functions, undefined, Infinity, NaN, RegExp, Map, Set, and converts Dates to strings.
+
+   2. Using structuredClone():
+      * Creates a deep clone of most serializable objects.
+      * Preserves Dates, Maps, Sets, TypedArrays, and handles cyclic references.
+      * Limitation: Cannot clone functions or DOM nodes.
+
+Note: Use external libraries like Lodash (_.cloneDeep) to handles complex structures and edge cases reliably.

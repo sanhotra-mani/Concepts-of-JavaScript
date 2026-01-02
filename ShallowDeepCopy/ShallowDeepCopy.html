@@ -1,0 +1,38 @@
+<script>
+(function(){
+
+    const originalObj = { name: "Mani", details: { age: 25, city: "Amritsar" } };
+
+    // Shallow copy
+    const shallowA = { ...originalObj };
+    const shallowB = Object.assign({}, originalObj);
+
+    // Modify the nested object in the shallow copy
+    shallowA.details.city = "Chandigarh";
+
+    // Original object is also affected
+    console.log(originalObj.details.city); // Output: "Chandigarh"
+
+    // Modify the nested object in the shallow copy
+    shallowB.details.city = "New Delhi";
+
+    // Original object is also affected
+    console.log(originalObj.details.city); // Output: "New Delhi"
+
+    
+
+    // Deep copy using JSON methods
+    const deepCopyA = JSON.parse(JSON.stringify(originalObj));
+    // Deep copy using structuredClone (modern approach)
+    const deepCopyB = structuredClone(originalObj);
+
+    // Modify the nested object in the deep copy
+    deepCopyA.details.city = "Chandigarh";
+    deepCopyB.details.city = "Chennai";
+
+    // Original object remains unchanged
+    console.log(originalObj.details.city); // Output: "Amritsar"
+    console.log(originalObj.details.city); // Output: "Amritsar"
+
+})();
+</script>
