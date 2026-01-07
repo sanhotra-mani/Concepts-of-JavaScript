@@ -1,0 +1,5 @@
+Java Script Interview Question:
+Que: typeOf vs InstanceOf?
+Ans: The primary difference of typeOf and InstanceOf is that the typeof operator checks for a value's primitive data type (returning a string), while the instanceof operator checks if an object is an instance of a specific class or constructor along its prototype chain (returning a boolean). 
+
+#javascript #typeOf #instanceOf #parameter #argument #conceptsOfJavaScript #freeLancer #reactJs #frontend #softwareDeveloper #nodeJs #backend #fullStack #interviewQuestion

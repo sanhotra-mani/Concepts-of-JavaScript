@@ -1,0 +1,36 @@
+<script>
+(function(){
+    
+    typeof "hello";      // returns "string"
+    typeof 42;           // returns "number"
+    typeof true;         // returns "boolean"
+    typeof undefined;    // returns "undefined"
+    typeof function(){}; // returns "function"
+    typeof {};           // returns "object"
+    typeof [];           // returns "object" (Arrays are objects)
+    typeof null;         // returns "object" (the historical bug)
+
+
+
+    class Animal {}
+    class Dog extends Animal {}
+
+    const dog = new Dog();
+    const myString = "hello";
+    const myDate = new Date();
+
+    dog instanceof Dog;     // returns true
+    dog instanceof Animal;  // returns true (due to prototype chain check)
+    myDate instanceof Date; // returns true
+
+    // Primitives are not instances of their object wrappers
+    myString instanceof String; // returns false
+    "hello" instanceof Object;  // returns false
+    new String("hello") instanceof String; // returns true (it's an object wrapper)
+
+    [] instanceof Array;    // returns true
+    [] instanceof Object;   // returns true (Arrays inherit from Object)
+
+
+})();
+</script>
