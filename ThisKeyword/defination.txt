@@ -1,0 +1,19 @@
+JavaScript Interview Question:
+Que: How this keyword behaves differently?
+Ans: The this keyword in JavaScript is a dynamic reference to the object that is executing the current function. Its value is determined at runtime by how a function is called, not where it is defined, making it a powerful and flexible concept.
+
+1. In an Object Method (Implicit Binding)
+When a function is called as a method of an object (using dot notation), this refers to the object itself. This allows the method to access the object's properties and other methods.
+
+2. In an Arrow Function (Lexical Binding) 
+Arrow functions behave differently; they do not have their own this binding. Instead, they inherit this from their immediately enclosing (parent) lexical scope (the scope where they were defined).
+
+3. In a Regular Function (Default Binding)
+When a regular, standalone function is called without being attached to an object, the value of this defaults to the global object (e.g., window in a browser, global in Node.js) in non-strict mode. 
+In strict mode ('use strict'), this is undefined in a standalone function, which helps prevent accidental global variable creation. 
+
+4. In a Constructor Function (New Binding) 
+When a function is invoked with the new keyword, it acts as a constructor. JavaScript automatically creates a new, empty object and binds this to that new instance.
+
+5. Explicit Binding (call, apply, and bind) 
+You can explicitly force the value of this for a function call using the .call(), .apply(), or .bind() methods.

@@ -1,0 +1,67 @@
+<script>
+(function(){
+
+    console.log(window === this);  // Output: true (in browsers, 'this' in global scope refers to 'window')
+
+    //In an Object Method (Implicit Binding)
+    const obj = {
+        x: 10,
+        fn: function() {
+            console.log(this.x);    // Output: 10
+            console.log(this);      // Output: obj object itself
+        }
+    }
+    obj.fn();
+    
+
+    // In an Arrow Function (Lexical Binding)
+    const obj2 = {
+        x: 10,
+        fn1: () => {
+            console.log(this.x);    // Output: undefined
+            console.log(this);    // Output: window object
+            // Arrow function does not have its own 'this', it uses 'this' from the enclosing scope
+        },
+        fn2: function() {
+            let arw = () => {
+                console.log(this.x);    // Output: 10
+                // Arrow function does not have its own 'this', it uses 'this' from the enclosing scope
+            }
+            arw();
+        }
+    }
+    obj2.fn2();
+
+
+    // In a Regular Function (Default Binding)
+    function showThis() {
+        console.log(this);
+    }
+
+    // Non-strict mode (browser environment):
+    showThis(); // Output: Window (the global object)
+
+    // Strict mode:
+    "use strict";
+    function showStrictThis() {
+        console.log(this);
+    }
+
+    showStrictThis(); // Output: undefined
+
+
+    //  In a Constructor Function (New Binding) 
+    function Car(make, model) {
+        this.make = make; // 'this' refers to the new object being created
+        this.model = model;
+    }
+
+    const myCar = new Car("Toyota", "Camry");
+    console.log(myCar.make); // Output: Toyota
+
+
+
+
+
+})();
+</script>
